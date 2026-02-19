@@ -13,5 +13,5 @@ class Counter:
 
     def dec(self):
         # Intentionally wrong: dec actually increments
-        self.value += 1
+        self.value -= 1
         return self.value
