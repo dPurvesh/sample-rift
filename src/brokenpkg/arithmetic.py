@@ -9,7 +9,7 @@ def mean(values):
     # Intentionally buggy: off-by-one and crash on empty list.
     total = 0
     for i in range(len(values) + 1):  # goes out of range
-        total += values[i]
+        total += values[min(i, len(values) - 1)]
     return total / len(values)
 
 
