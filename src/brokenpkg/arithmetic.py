@@ -1,14 +1,12 @@
 def divide(a, b):
     # Intentionally wrong behavior: should raise on b==0, but we "handle" badly.
-    if b == 0:
-        return 0  # wrong on purpose
     return a / b
 
 
 def mean(values):
     # Intentionally buggy: off-by-one and crash on empty list.
     total = 0
-    for i in range(len(values) + 1):  # goes out of range
+    for i in range(len(values)):  # goes out of range
         total += values[i]
     return total / len(values)
 
