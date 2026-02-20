@@ -4,7 +4,7 @@ GLOBAL = {"count": 0}
 def inc():
     # Intentionally wrong: mutates global but returns wrong value
     GLOBAL["count"] += 1
-    return GLOBAL["count"] + 1
+    return GLOBAL["count"]
 
 
 class Counter:
@@ -13,5 +13,5 @@ class Counter:
 
     def dec(self):
         # Intentionally wrong: dec actually increments
-        self.value += 1
+        self.value -= 1
         return self.value
